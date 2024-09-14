@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root{
+    --br: 3px;
+    --colorp: #8629FF;
+    --bg-off: #B6BDBF;
+    --font: "Nunito Sans", sans-serif;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.containerGeneral{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.imageContainer{
+    width: 50%;
+    height: 100%;
+    background-image: url('back.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    color: white;
+}
+
+.headerLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+
+.headerLogin img{
+    width: 200px;
+}
+
+.headerLogin h1{
+    font-size: 30px;
+    font-weight: 300;
+    height: 0px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.headerLogin h2{
+    font-size: 20px;
+    color: var(--colorp);
+    font-weight: 300;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.formLogin{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inputBox{
+    background-color: #fff;
+    border: 1px solid #b6bdbf;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 8px #0000001a;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.inputBox input{
+    width: 100%;
+    border: none;
+    font-family: var(--font);
+    outline: none;
+}
+
+.inputBox select{
+    width: 100%;
+    border: none;
+    font-family: var(--font);
+    outline: none;
+}
+
+.inputBox:focus-within {
+    border: 1px solid #8629ff8f;
+    transition: .3s ease-in-out;
+}
+
+.inputBox svg{
+    color: var(--colorp);
+}
+
+.imageContainer p{
+    font-family: "Nunito Sans", sans-serif;
+    width: 230px;
+    font-weight: 200;
+    font-size: 28px;
+}
+
+.loginAuto{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.61);
+    font-family: var(--font);
+    gap: 5px;
+}
+
+.buttonLogin{
+    color: #fff;
+    font-family: var(--font);
+    border-radius: var(--br);
+    font-size: 14px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0 8px;
+    line-height: 1rem;
+    border: none;
+    background: var(--colorp);
+}
+
+.buttonLogin:disabled{
+    background-color: var(--bg-off);
+    border: 1px solid #b6bdbf;
+    color: #fff;
+}
+
+.inforContainer{
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inforContainer a, .inforContainer div{
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.685);
+    transition: .3s all;
+}
+
+.inforContainer a:hover, .inforContainer div:hover{
+    color: var(--colorp);
+    font-weight: 600;
+    transition: .3s all;
+}
+
+
+.interactContainer, .interactContainer2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hidden {
+    display: none;
+    animation: esconder 0.8s forwards;
+  }
+  
+  .visible {
+    display: flex;
+    animation: mostrar 0.8s forwards;
+  }
+
+  .visible2 {
+    display: flex;
+    animation: mostrar2 0.8s forwards;
+  }
+  
+  
+  @keyframes esconder {
+    0% {
+        display: none;
+      transform: translateX(0);
+    }
+    100% {
+      display: none;
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes mostrar {
+    0% {
+      display: none;
+      transform: translateX(100%);
+    }
+    100% {
+      display: flex;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes mostrar2 {
+    0% {
+      display: none;
+      transform: translateX(-100%);
+    }
+    100% {
+      display: flex;
+      transform: translateX(0);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    zoom: 0.5;
+    cursor: pointer;
+  }
+  
+  .toggle-switch input[type="checkbox"] {
+    display: none;
+  }
+  
+  .toggle-switch-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 2px #ccc;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .toggle-switch-handle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .toggle-switch::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: -35px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #aaa;
+    text-shadow: 1px 1px #fff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .toggle-switch input[type="checkbox"]:checked + .toggle-switch-handle {
+    transform: translateX(45px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 3px var(--colorp);
+  }
+  
+  .toggle-switch input[type="checkbox"]:checked + .toggle-switch-background {
+    background-color: var(--colorp);
+    box-shadow: inset 0 0 0 2px var(--colorp);
+  }
+  
+  .toggle-switch input[type="checkbox"]:checked + .toggle-switch:before {
+    content: "On";
+    color: var(--colorp);
+    right: -15px;
+  }
+  
+  .toggle-switch input[type="checkbox"]:checked + .toggle-switch-background .toggle-switch-handle {
+    transform: translateX(40px);
+  }
+  
+
+  .error-msg{
+    padding: 10px;
+    border-radius: var(--br);
+    border: 1px solid rgba(255, 0, 0, 0.226);
+    color: rgb(255, 86, 86);
+    font-family: var(--font);
+    font-size: 15px;
+    background-color: rgba(255, 0, 0, 0.158);
+  }
+
+  .sucess-msg{
+    padding: 10px;
+    border-radius: var(--br);
+    border: 1px solid rgba(6, 121, 6, 0.226);
+    color: rgb(6, 121, 6);
+    font-family: var(--font);
+    font-size: 15px;
+    background-color: rgba(0, 255, 0, 0.158);
+  }
+
+  @media only screen and (max-width: 600px) {
+   .imageContainer{
+    display: none;
+   }
+   .containerGeneral{
+    justify-content: center;
+    align-items: center;
+   }
+   .interactContainer, .interactContainer2{
+    width: 100%;
+   }
+   .formLogin{
+    width: 80%;
+   }
+  }
+
+  .localizacao{
+    display: flex;
+    align-items: center;
+    font-family: var(--font);
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .localizacao span{
+    color: rgba(0, 0, 0, 0.61);
+  }
+
+  .localizacao span span{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+  }
+
+  .localizacao svg{
+    color: #8629FF;
+  }
+
+  .containerGeneral.locked {
+    position: relative;
+    opacity: 0.2;
+    filter: saturate(0%);
+    pointer-events: none; 
+  }
+  
+  .containerGeneral.locked::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: saturate(0%);
+    z-index: 999;
+  }
+  

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter e Baixar JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Converter e Baixar JSON</h1>
+    <textarea id="inputData" placeholder="Insira os dados aqui..."></textarea><br>
+    <button onclick="convertAndDownload()">Converter e Baixar JSON</button>
+
+    <script>
+        function convertAndDownload() {
+            const inputData = document.getElementById('inputData').value.trim();
+            const lines = inputData.split('\n');
+            const jsonArray = [];
+
+            lines.forEach(line => {
+                const [nome, link, categoria] = line.split(',');
+                if (nome && link && categoria) {
+                    jsonArray.push({
+                        Nome: nome.trim().replace(/^"|"$/g, ''),
+                        Link: link.trim().replace(/^"|"$/g, ''),
+                        Categoria: categoria.trim().replace(/^"|"$/g, ''),
+                        Imagem: '' // Adicionar a URL da imagem se necessário
+                    });
+                }
+            });
+
+            const jsonBlob = new Blob([JSON.stringify(jsonArray, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(jsonBlob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'dados.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

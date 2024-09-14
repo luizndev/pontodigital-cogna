@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root{
+  --br: 3px;
+  --colorp: #8629FF;
+  --bg-off: #B6BDBF;
+  --font: "Nunito Sans", sans-serif;
+}
+
+body{
+  padding: 0px;
+  overflow-x: hidden;
+  margin: 0px;
+  font-family: var(--font) !important;
+}
+
+.containerBuscar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoUser{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.infoUser h2{
+    width: 100%;
+    font-size: 20px;
+    height: 15px;
+    color: #000000d7;
+    font-weight: 400;
+}
+
+.disciplinasConfig h2{
+    width: 100%;
+    font-size: 20px;
+    height: 15px;
+    color: #000000d7;
+    font-weight: 400;
+}
+
+.disciplinasAtuais{
+    margin-left: 20px;
+    margin-top: -20px;
+}
+
+.disciplinasAtuais h3{
+    width: 100%;
+    font-size: 20px;
+    height: 15px;
+    color: #000000d7;
+    font-weight: 400;
+}
+
+.infoUser label{
+    display: flex;
+    width: 48%;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.disciplinasContainerConfig{
+    width: 95%;
+    display: flex;
+    flex-direction: column;  
+}
+
+
+.buscarUser{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleBusca{
+    font-size: 20px;
+    height: 15px;
+    color: #000000d7;
+    font-weight: 400;
+}
+
+.inputBuscaContainer{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+
+.inputInfo{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #b6bdbf;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 8px #0000001a;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.inputInfo input{
+    width: 100%;
+    border: none;
+    font-family: var(--font);
+    outline: none;
+}
+
+.inputInfo select{
+    width: 100%;
+    border: none;
+    font-family: var(--font);
+    outline: none;
+}
+
+.inputInfo:focus-within {
+    border: 1px solid #8629ff8f;
+    transition: .3s ease-in-out;
+}
+
+.inputInfo svg{
+    color: var(--colorp);
+}
+
+.disciplinasConfig{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.buttonInfo{
+    margin-top: 10px;
+    color: #fff;
+    font-family: var(--font);
+    border-radius: var(--br);
+    font-size: 14px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0 8px;
+    line-height: 1rem;
+    border: none;
+    background: var(--colorp);
+}
+
+.addNewDisciplina{
+    width: 100%;
+    color: #363636ee;
+    font-family: var(--font);
+    border-radius: var(--br);
+    font-size: 14px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0 8px;
+    line-height: 1rem;
+    border: none;
+    background: white;
+}
+
+.buttomAdd{
+    width: 109%;
+    color: #fff;
+    font-family: var(--font);
+    border-radius: var(--br);
+    font-size: 14px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0 8px;
+    line-height: 1rem;
+    border: none;
+    background: var(--colorp);
+}
+
+.buttonInfo:disabled{
+    background-color: var(--bg-off);
+    border: 1px solid #b6bdbf;
+    color: #fff;
+}
+
+
+
+  
+.inputBusca{
+    background-color: #fff;
+    border: 1px solid #b6bdbf;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 8px #0000001a;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.inputBusca input{
+    width: 100%;
+    border: none;
+    font-family: var(--font);
+    outline: none;
+}
+
+.inputBusca select{
+    width: 100%;
+    border: none;
+    font-family: var(--font);
+    outline: none;
+}
+
+.inputBusca:focus-within {
+    border: 1px solid #8629ff8f;
+    transition: .3s ease-in-out;
+}
+
+.inputBusca svg{
+    color: var(--colorp);
+}
+
+.buttonBusca{
+    color: #fff;
+    font-family: var(--font);
+    border-radius: var(--br);
+    font-size: 14px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0 8px;
+    line-height: 1rem;
+    border: none;
+    background: var(--colorp);
+}
+
+.buttonBusca:disabled{
+    background-color: var(--bg-off);
+    border: 1px solid #b6bdbf;
+    color: #fff;
+}
+
+
+#leftLabel{
+    margin-left: 30px !important;
+}
+
+
+.rightGroup{
+    width: 80%;
+    height: 250px;
+}
+
+
+.ulContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.inputDisciplina{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #b6bdbf;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 8px #0000001a;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    height: 32px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.inputDisciplina input{
+    width: 100%;
+    border: none;
+    font-family: var(--font);
+    outline: none;
+}
+
+.inputDisciplina label{
+    width: 100%;
+    color: #070707;
+    border: none;
+    font-size: 12px;
+    font-family: var(--font);
+    outline: none;
+}
+
+.inputDisciplina select{
+    width: 100%;
+    border: none;
+    font-family: var(--font);
+    outline: none;
+}
+
+.inputDisciplina:focus-within {
+    border: 1px solid #8629ff8f;
+    transition: .3s ease-in-out;
+}
+
+.inputDisciplina svg{
+    color: var(--colorp);
+}
+
+.felxInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ulContainer li{
+
+}
+
+.excluirButton svg{
+    column-rule: red;
+}
+
+.excluirButton{
+    border: none;
+    border-color: red;
+    background-color: #00000000;
+}
+
+.listOptions{
+    color: white;
+    align-items: center;
+    display: flex;
+    text-decoration: none !important;
+    gap: 15px;
+}
+
+.listOptions a{
+    text-decoration: none;
+    color: white;
+}
+
+.diaSemana{
+    text-transform: capitalize;
+}
+
+
+.disciplinasTable{
+    width: 100%;
+}
+
+.disciplinasTable thead{
+    background-color: #b6bdbf6e;
+    font-weight: 300 !important;
+
+}
+
+
+.actionButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action{
+    width: 100px;
+}
+
+.actionButtons button{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: rgb(255, 86, 86);
+}
+
+.horario{
+    display: flex;
+    align-items: center;
+}
+
+.actionButton button {
+    zoom: .7;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+   }
+   
+   .actionButton button, button span {
+    transition: 200ms;
+   }
+   
+   .actionButton button .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+   }
+   
+   .actionButton button .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   .actionButton button svg {
+    width: 15px;
+    fill: #eee;
+   }
+   
+   .actionButton button:hover {
+    background: #ff3636;
+   }
+   
+   .actionButton button:hover .text {
+    color: transparent;
+   }
+   
+   .actionButton button:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+   }
+   
+   .actionButton button:focus {
+    outline: none;
+   }
+   
+   .actionButton button:active .icon svg {
+    transform: scale(0.8);
+   }
+
+
+   tbody tr{
+    margin-bottom: 1120px;
+}

@@ -1,0 +1,343 @@
+[
+    {
+      "Nome": "Rio de Janeiro (InterTV Alto Litoral)",
+      "Link": "https://reidoscanais.me/embed/?id=globorj-globorio"
+    },
+    {
+      "Nome": "Rio de Janeiro (InterTV Serra+Mar)",
+      "Link": "https://reidoscanais.me/embed/?id=globorj-intertvaltolitoral"
+    },
+    {
+      "Nome": "Rio de Janeiro (TV Rio Sul)",
+      "Link": "https://reidoscanais.me/embed/?id=globorj-intertvserramar"
+    },
+    {
+      "Nome": "São Paulo (Globo São Paulo)",
+      "Link": "https://reidoscanais.me/embed/?id=globorj-tvriosul"
+    },
+    {
+      "Nome": "São Paulo (EPTV Central)",
+      "Link": "https://reidoscanais.me/embed/?id=globosp-globosaopaulo"
+    },
+    {
+      "Nome": "São Paulo (TV Diário)",
+      "Link": "https://reidoscanais.me/embed/?id=globosp-eptvcentral"
+    },
+    {
+      "Nome": "São Paulo (TV TEM Itapetininga)",
+      "Link": "https://reidoscanais.me/embed/?id=globosp-tvdiario"
+    },
+    {
+      "Nome": "São Paulo (TV Vanguarda S. J. Campos)",
+      "Link": "https://reidoscanais.me/embed/?id=globosp-tvtemitapetininga"
+    },
+    {
+      "Nome": "São Paulo (TV Vanguarda Taubaté)",
+      "Link": "https://reidoscanais.me/embed/?id=globosp-tvvanguardasjcampos"
+    },
+    {
+      "Nome": "Minas Gerais (Globo Minas)",
+      "Link": "https://reidoscanais.me/embed/?id=globosp-tvvanguardataubate"
+    },
+    {
+      "Nome": "Minas Gerais (InterTV dos Vales)",
+      "Link": "https://reidoscanais.me/embed/?id=globomg-globominas"
+    },
+    {
+      "Nome": "Minas Gerais (TV Integração Araxá)",
+      "Link": "https://reidoscanais.me/embed/?id=globomg-intertvdosvales"
+    },
+    {
+      "Nome": "Minas Gerais (TV Integração Juiz de Fora)",
+      "Link": "https://reidoscanais.me/embed/?id=globomg-tvintegracaoaraxa"
+    },
+    {
+      "Nome": "Minas Gerais (TV Integração Uberaba)",
+      "Link": "https://reidoscanais.me/embed/?id=globomg-tvintegracaojuizdefora"
+    },
+    {
+      "Nome": "Espírito Santo (TV Gazeta Vitória)",
+      "Link": "https://reidoscanais.me/embed/?id=globomg-tvintegracaouberaba"
+    },
+    {
+      "Nome": "Rio Grande do Sul (RBS TV Porto Alegre)",
+      "Link": "https://reidoscanais.me/embed/?id=globoes-tvgazetavitoria"
+    },
+    {
+      "Nome": "Rio Grande do Sul (RBS TV Caxias do Sul)",
+      "Link": "https://reidoscanais.me/embed/?id=globors-rbstvportoalegre"
+    },
+    {
+      "Nome": "Rio Grande do Sul (RBS TV Santa Cruz)",
+      "Link": "https://reidoscanais.me/embed/?id=globors-rbstvcaxiasdosul"
+    },
+    {
+      "Nome": "Santa Catarina (NSC TV Florianópolis)",
+      "Link": "https://reidoscanais.me/embed/?id=globors-rbstvsantacruz"
+    },
+    {
+      "Nome": "Santa Catarina (NSC TV Chapecó)",
+      "Link": "https://reidoscanais.me/embed/?id=globosc-nsctvflorianopolis"
+    },
+    {
+      "Nome": "Santa Catarina (NSC TV Joinville)",
+      "Link": "https://reidoscanais.me/embed/?id=globosc-nsctvchapeco"
+    },
+    {
+      "Nome": "Paraná (RPC Curitiba)",
+      "Link": "https://reidoscanais.me/embed/?id=globosc-nsctvjoinville"
+    },
+    {
+      "Nome": "Pernambuco (Globo Nordeste)",
+      "Link": "https://reidoscanais.me/embed/?id=globopr-rpccuritiba"
+    },
+    {
+      "Nome": "Pernambuco (TV Asa Branca)",
+      "Link": "https://reidoscanais.me/embed/?id=globope-globonordeste"
+    },
+    {
+      "Nome": "Bahia (TV Bahia)",
+      "Link": "https://reidoscanais.me/embed/?id=globope-tvasabranca"
+    },
+    {
+      "Nome": "Bahia (TV Santa Cruz)",
+      "Link": "https://reidoscanais.me/embed/?id=globoba-tvbahia"
+    },
+    {
+      "Nome": "Bahia (TV Sudoeste)",
+      "Link": "https://reidoscanais.me/embed/?id=globoba-tvsantacruz"
+    },
+    {
+      "Nome": "Ceará (TV Verdes Mares Fortaleza)",
+      "Link": "https://reidoscanais.me/embed/?id=globoba-tvsudoeste"
+    },
+    {
+      "Nome": "Ceará (TV Verdes Mares Cariri)",
+      "Link": "https://reidoscanais.me/embed/?id=globoce-tvverdesmaresfortaleza"
+    },
+    {
+      "Nome": "Piauí (TV Clube)",
+      "Link": "https://reidoscanais.me/embed/?id=globoce-tvverdesmarescariri"
+    },
+    {
+      "Nome": "Maranhão (TV Mirante São Luís)",
+      "Link": "https://reidoscanais.me/embed/?id=globopi-tvclube"
+    },
+    {
+      "Nome": "Rio Grande do Norte (InterTV Cabugi)",
+      "Link": "https://reidoscanais.me/embed/?id=globoma-tvmirantessaoluis"
+    },
+    {
+      "Nome": "Paraíba (TV Cabo Branco)",
+      "Link": "https://reidoscanais.me/embed/?id=globorn-intertvcabugi"
+    },
+    {
+      "Nome": "Brasília (Globo Brasília)",
+      "Link": "https://reidoscanais.me/embed/?id=globopb-tvcabobranco"
+    },
+    {
+      "Nome": "Goiás (TV Anhanguera Goiânia)",
+      "Link": "https://reidoscanais.me/embed/?id=globodf-globobrasilia"
+    },
+    {
+      "Nome": "Amazonas (Rede Amazônica Manaus)",
+      "Link": "https://reidoscanais.me/embed/?id=globogo-tvanhangueragoiania"
+    },
+    {
+      "Nome": "Pará (TV Liberal Belém)",
+      "Link": "https://reidoscanais.me/embed/?id=globoam-redeamazonicamanaus"
+    },
+    {
+      "Nome": "SBT",
+      "Link": "https://reidoscanais.me/embed/?id=globopa-tvliberalbelem"
+    },
+    {
+      "Nome": "Band",
+      "Link": "https://reidoscanais.me/embed/?id=sbt"
+    },
+    {
+      "Nome": "Record SP",
+      "Link": "https://reidoscanais.me/embed/?id=band"
+    },
+    {
+        "Nome": "Globo Rio de Janeiro (InterTV Alto Litoral)",
+        "Link": "https://reidoscanais.me/embed/?id=globorj-globorio"
+    },
+    {
+        "Nome": "Globo Rio de Janeiro (InterTV Serra+Mar)",
+        "Link": "https://reidoscanais.me/embed/?id=globorj-intertvaltolitoral"
+    },
+    {
+        "Nome": "Globo Rio de Janeiro (TV Rio Sul)",
+        "Link": "https://reidoscanais.me/embed/?id=globorj-intertvserramar"
+    },
+    {
+        "Nome": "Globo São Paulo (Globo São Paulo)",
+        "Link": "https://reidoscanais.me/embed/?id=globorj-tvriosul"
+    },
+    {
+        "Nome": "Globo São Paulo (EPTV Central)",
+        "Link": "https://reidoscanais.me/embed/?id=globosp-globosaopaulo"
+    },
+    {
+        "Nome": "Globo São Paulo (TV Diário)",
+        "Link": "https://reidoscanais.me/embed/?id=globosp-eptvcentral"
+    },
+    {
+        "Nome": "Globo São Paulo (TV TEM Itapetininga)",
+        "Link": "https://reidoscanais.me/embed/?id=globosp-tvdiario"
+    },
+    {
+        "Nome": "Globo São Paulo (TV Vanguarda S. J. Campos)",
+        "Link": "https://reidoscanais.me/embed/?id=globosp-tvtemitapetininga"
+    },
+    {
+        "Nome": "Globo São Paulo (TV Vanguarda Taubaté)",
+        "Link": "https://reidoscanais.me/embed/?id=globosp-tvvanguardasjcampos"
+    },
+    {
+        "Nome": "Globo Minas Gerais (Globo Minas)",
+        "Link": "https://reidoscanais.me/embed/?id=globosp-tvvanguardataubate"
+    },
+    {
+        "Nome": "Globo Minas Gerais (InterTV dos Vales)",
+        "Link": "https://reidoscanais.me/embed/?id=globomg-globominas"
+    },
+    {
+        "Nome": "Globo Minas Gerais (TV Integração Araxá)",
+        "Link": "https://reidoscanais.me/embed/?id=globomg-intertvdosvales"
+    },
+    {
+        "Nome": "Globo Minas Gerais (TV Integração Juiz de Fora)",
+        "Link": "https://reidoscanais.me/embed/?id=globomg-tvintegracaoaraxa"
+    },
+    {
+        "Nome": "Globo Minas Gerais (TV Integração Uberaba)",
+        "Link": "https://reidoscanais.me/embed/?id=globomg-tvintegracaojuizdefora"
+    },
+    {
+        "Nome": "Globo Espírito Santo (TV Gazeta Vitória)",
+        "Link": "https://reidoscanais.me/embed/?id=globomg-tvintegracaouberaba"
+    },
+    {
+        "Nome": "Globo Rio Grande do Sul (RBS TV Porto Alegre)",
+        "Link": "https://reidoscanais.me/embed/?id=globoes-tvgazetavitoria"
+    },
+    {
+        "Nome": "Globo Rio Grande do Sul (RBS TV Caxias do Sul)",
+        "Link": "https://reidoscanais.me/embed/?id=globors-rbstvportoalegre"
+    },
+    {
+        "Nome": "Globo Rio Grande do Sul (RBS TV Santa Cruz)",
+        "Link": "https://reidoscanais.me/embed/?id=globors-rbstvcaxiasdosul"
+    },
+    {
+        "Nome": "Globo Santa Catarina (NSC TV Florianópolis)",
+        "Link": "https://reidoscanais.me/embed/?id=globors-rbstvsantacruz"
+    },
+    {
+        "Nome": "Globo Santa Catarina (NSC TV Chapecó)",
+        "Link": "https://reidoscanais.me/embed/?id=globosc-nsctvflorianopolis"
+    },
+    {
+        "Nome": "Globo Santa Catarina (NSC TV Joinville)",
+        "Link": "https://reidoscanais.me/embed/?id=globosc-nsctvchapeco"
+    },
+    {
+        "Nome": "Globo Paraná (RPC Curitiba)",
+        "Link": "https://reidoscanais.me/embed/?id=globosc-nsctvjoinville"
+    },
+    {
+        "Nome": "Globo Pernambuco (Globo Nordeste)",
+        "Link": "https://reidoscanais.me/embed/?id=globopr-rpccuritiba"
+    },
+    {
+        "Nome": "Globo Pernambuco (TV Asa Branca)",
+        "Link": "https://reidoscanais.me/embed/?id=globope-globonordeste"
+    },
+    {
+        "Nome": "Globo Bahia (TV Bahia)",
+        "Link": "https://reidoscanais.me/embed/?id=globope-tvasabranca"
+    },
+    {
+        "Nome": "Globo Bahia (TV Santa Cruz)",
+        "Link": "https://reidoscanais.me/embed/?id=globoba-tvbahia"
+    },
+    {
+        "Nome": "Globo Bahia (TV Sudoeste)",
+        "Link": "https://reidoscanais.me/embed/?id=globoba-tvsantacruz"
+    },
+    {
+        "Nome": "Globo Ceará (TV Verdes Mares Fortaleza)",
+        "Link": "https://reidoscanais.me/embed/?id=globoba-tvsudoeste"
+    },
+    {
+        "Nome": "Globo Ceará (TV Verdes Mares Cariri)",
+        "Link": "https://reidoscanais.me/embed/?id=globoce-tvverdesmaresfortaleza"
+    },
+    {
+        "Nome": "Globo Piauí (TV Clube)",
+        "Link": "https://reidoscanais.me/embed/?id=globoce-tvverdesmarescariri"
+    },
+    {
+        "Nome": "Globo Maranhão (TV Mirante São Luís)",
+        "Link": "https://reidoscanais.me/embed/?id=globopi-tvclube"
+    },
+    {
+        "Nome": "Globo Rio Grande do Norte (InterTV Cabugi)",
+        "Link": "https://reidoscanais.me/embed/?id=globoma-tvmirantessaoluis"
+    },
+    {
+        "Nome": "Globo Paraíba (TV Cabo Branco)",
+        "Link": "https://reidoscanais.me/embed/?id=globorn-intertvcabugi"
+    },
+    {
+        "Nome": "Globo Brasília (Globo Brasília)",
+        "Link": "https://reidoscanais.me/embed/?id=globopb-tvcabobranco"
+    },
+    {
+        "Nome": "Globo Goiás (TV Anhanguera Goiânia)",
+        "Link": "https://reidoscanais.me/embed/?id=globodf-globobrasilia"
+    },
+    {
+        "Nome": "Globo Amazonas (Rede Amazônica Manaus)",
+        "Link": "https://reidoscanais.me/embed/?id=globogo-tvanhangueragoiania"
+    },
+    {
+        "Nome": "Globo Pará (RBA TV Santarém)",
+        "Link": "https://reidoscanais.me/embed/?id=globopa-tvliberalbelem"
+    },
+    {
+        "Nome": "Globo Tocantins (TV Anhanguera Palmas)",
+        "Link": "https://reidoscanais.me/embed/?id=globopa-rbatvsantarem"
+    },
+    {
+        "Nome": "Globo Maranhão (TV Mirante Imperatriz)",
+        "Link": "https://reidoscanais.me/embed/?id=globotoc-tvanhanguerapalmas"
+    },
+    {
+        "Nome": "Globo Mato Grosso (TV Centro América)",
+        "Link": "https://reidoscanais.me/embed/?id=globoma-tvmiranteimperatriz"
+    },
+    {
+        "Nome": "Globo Mato Grosso do Sul (TV Morena)",
+        "Link": "https://reidoscanais.me/embed/?id=globomt-tvcentroamerica"
+    },
+    {
+        "Nome": "Globo Distrito Federal (TV Globo Brasília)",
+        "Link": "https://reidoscanais.me/embed/?id=globoms-tvmorena"
+    },
+    {
+        "Nome": "Globo Rondônia (Rede Amazônica Porto Velho)",
+        "Link": "https://reidoscanais.me/embed/?id=globodf-tvglobobrasilia"
+    },
+    {
+        "Nome": "Globo Acre (TV Gazeta Rio Branco)",
+        "Link": "https://reidoscanais.me/embed/?id=globoro-redeamazonicaportovelho"
+    },
+    {
+        "Nome": "Globo Amazonas (Rede Amazônica Rio Branco)",
+        "Link": "https://reidoscanais.me/embed/?id=globoac-tvgazetariobranco"
+    }
+  ]
+  
