@@ -31,7 +31,7 @@ const Painel = () => {
 
   const buscarUsuario = async () => {
     try {
-      const response = await fetch(`http://localhost:30120/user?email=${email}`);
+      const response = await fetch(`https://api-pontodigital.onrender.com/user?email=${email}`);
       if (!response.ok) {
         throw new Error('Erro ao buscar usuário');
       }
@@ -52,7 +52,7 @@ const Painel = () => {
 
   const adicionarDisciplina = async () => {
     try {
-      const response = await fetch('http://localhost:30120/add/disciplina', {
+      const response = await fetch('https://api-pontodigital.onrender.com/add/disciplina', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ const Painel = () => {
 
   const excluirDisciplina = async (nomeDisciplina) => {
     try {
-      const response = await fetch('http://localhost:30120/delete/disciplina', {
+      const response = await fetch('https://api-pontodigital.onrender.com/delete/disciplina', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
@@ -100,7 +100,7 @@ const Painel = () => {
 
   const editarInformacoesUsuario = async () => {
     try {
-      const response = await fetch('http://localhost:30120/user', {
+      const response = await fetch('https://api-pontodigital.onrender.com/user', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -123,7 +123,7 @@ const Painel = () => {
 
   const extrairRelatorio = async () => {
     try {
-        const response = await fetch('http://localhost:30120/extrair-relatorio', {
+        const response = await fetch('https://api-pontodigital.onrender.com/extrair-relatorio', {
             method: 'GET'
         });
 
