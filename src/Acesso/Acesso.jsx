@@ -108,7 +108,7 @@ const Acesso = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('https://api-pontodigital.onrender.com/login', {
+      const response = await fetch('https://api-pontodigital.vercel.app/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -138,7 +138,7 @@ const Acesso = () => {
     }
 
     try {
-      const response = await fetch('https://api-pontodigital.onrender.com/register', {
+      const response = await fetch('https://api-pontodigital.vercel.app/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
