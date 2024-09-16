@@ -66,7 +66,7 @@ const Painel = () => {
   const fetchUserData = useCallback(async () => {
     try {
       const token = sessionStorage.getItem('token');
-      const response = await fetch(`https://api-pontodigital.onrender.com/user?email=${encodeURIComponent(email)}`, {
+      const response = await fetch(`https://api-pontodigital.vercel.app/user?email=${encodeURIComponent(email)}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -103,7 +103,7 @@ const Painel = () => {
   const fetchDisciplinasEmAndamento = useCallback(async () => {
     try {
       const token = sessionStorage.getItem('token');
-      const response = await fetch(`https://api-pontodigital.onrender.com/logs?email=${encodeURIComponent(email)}`, {
+      const response = await fetch(`https://api-pontodigital.vercel.app/logs?email=${encodeURIComponent(email)}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -175,7 +175,7 @@ const Painel = () => {
     const hoje = formatDate(now);
   
     try {
-      const response = await fetch('https://api-pontodigital.onrender.com/logs', {
+      const response = await fetch('https://api-pontodigital.vercel.app/logs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -229,7 +229,7 @@ const Painel = () => {
     const hoje = formatDate(new Date());
   
     try {
-      const response = await fetch('https://api-pontodigital.onrender.com/logs', {
+      const response = await fetch('https://api-pontodigital.vercel.app/logs', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
