@@ -2,7 +2,7 @@ import { MdDelete } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
 import { MdOutlineCalendarToday } from "react-icons/md";
 import { IoMdBook } from "react-icons/io";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FiUser } from "react-icons/fi";
 import { LiaUniversitySolid } from "react-icons/lia";
 import './Admin.css';
@@ -27,7 +27,7 @@ const Painel = () => {
   });
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
-  const [viewDisciplina, setViewDisciplina] =  useState(false)
+  const [viewDisciplina, setViewDisciplina] = useState(false);
 
   const buscarUsuario = async () => {
     try {
@@ -36,8 +36,8 @@ const Painel = () => {
         throw new Error('Erro ao buscar usuário');
       }
       const data = await response.json();
+      console.log('Dados do usuário:', data); // Adiciona console log para depuração
       setViewDisciplina(true);
-      // console.log(data);
       setUser(data);
       setDisciplinas(data.disciplinas || []);
       setEditUser({
@@ -100,7 +100,7 @@ const Painel = () => {
 
   const editarInformacoesUsuario = async () => {
     try {
-      const response = await fetch('https://api-pontodigital.onrender.com/user', {
+      const response = await fetch('https://api-pontodigital.vercel.app/user', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -123,33 +123,33 @@ const Painel = () => {
 
   const extrairRelatorio = async () => {
     try {
-        const response = await fetch('https://api-pontodigital.vercel.app/extrair-relatorio', {
-            method: 'GET'
-        });
-
-        if (!response.ok) {
-            throw new Error('Erro ao extrair relatório');
-        }
-
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
-
-        const dataAtual = new Date();
-        const dia = String(dataAtual.getDate()).padStart(2, '0');
-        const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); 
-        const ano = dataAtual.getFullYear();
-        const dataFormatada = `${dia}-${mes}-${ano}`;
-
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `relatorio-pontodigital-${dataFormatada}.xlsx`;
-        a.click();
-        window.URL.revokeObjectURL(url);
+      const response = await fetch('https://api-pontodigital.vercel.app/extrair-relatorio', {
+        method: 'GET'
+      });
+  
+      if (!response.ok) {
+        throw new Error('Erro ao extrair relatório');
+      }
+  
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+  
+      const dataAtual = new Date();
+      const dia = String(dataAtual.getDate()).padStart(2, '0');
+      const mes = String(dataAtual.getMonth() + 1).padStart(2, '0');
+      const ano = dataAtual.getFullYear();
+      const dataFormatada = `${dia}-${mes}-${ano}`;
+  
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `relatorio-pontodigital-${dataFormatada}.xlsx`;
+      a.click();
+      window.URL.revokeObjectURL(url);
     } catch (error) {
-        // console.error('Erro ao extrair relatório:', error);
+      console.error('Erro ao extrair relatório:', error);
     }
-};
-
+  };
+  
 
   return (
     <div>
@@ -179,14 +179,14 @@ const Painel = () => {
         {user && (
           <div className='infoUser'>
             <h2>Informações do Usuário</h2>
-            <label>Email: <div className="inputInfo"><MdOutlineMail /><input type="text" value={user.email} readOnly /></div></label>
-            <label  id="leftLabel">Nome: <div className="inputInfo"><FiUser /><input type="text" value={user.id} readOnly /></div></label>
+            <label>Email: <div className="inputInfo"><MdOutlineMail /><input type="text" value={email} readOnly /></div></label>
+            <label id="leftLabel">Nome: <div className="inputInfo"><FiUser /><input type="text" value={user.username || ''} readOnly /></div></label>
             <label>Cargo: <div className="inputInfo"><MdOutlineWorkOutline /><input
               type="text"
               value={editUser.cargo}
               onChange={(e) => setEditUser({ ...editUser, cargo: e.target.value })}
             /></div></label>
-            <label  id="leftLabel">Curso: <div className="inputInfo"><LiaUniversitySolid /><input
+            <label id="leftLabel">Curso: <div className="inputInfo"><LiaUniversitySolid /><input
               type="text"
               value={editUser.curso}
               onChange={(e) => setEditUser({ ...editUser, curso: e.target.value })}
@@ -285,7 +285,14 @@ const Painel = () => {
                             <td>{disciplina.horario_inicio}</td>
                             <td>{disciplina.horario_fim}</td>
                             <td className="actionButton">
-                              <button class="noselect"  onClick={() => excluirDisciplina(disciplina.nome)}><span class="text">Excluir</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+                              <button className="noselect" onClick={() => excluirDisciplina(disciplina.nome)}>
+                                <span className="text">Excluir</span>
+                                <span className="icon">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                                  </svg>
+                                </span>
+                              </button>
                             </td>
                           </tr>
                         ))}
@@ -294,11 +301,9 @@ const Painel = () => {
                   </div>
                 )}
               </div>
-
             </div>
           )}
         </div>
-
       </div>
     </div>
   );

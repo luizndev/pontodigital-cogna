@@ -47,6 +47,7 @@ const Painel = () => {
   const [backgroundColor, setBackgroundColor] = useState('#ccc');
   const [time, setTime] = useState(new Date());
   const [name, setName] = useState('');
+  const [aulaIdCorret, setAulaIdCorret] = useState(null);
   const [role, setRole] = useState('');
   const [cargo, setCargo] = useState('');
   const [curso, setCurso] = useState('');
@@ -63,42 +64,43 @@ const Painel = () => {
   const queryParams = new URLSearchParams(location.search);
   const email = queryParams.get('email');
 
-  const fetchUserData = useCallback(async () => {
-    try {
-      const token = sessionStorage.getItem('token');
-      const response = await fetch(`https://api-pontodigital.vercel.app/user?email=${encodeURIComponent(email)}`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-
-      if (!response.ok) {
-        throw new Error('Erro ao carregar dados do usuário.');
-      }
-
-      const data = await response.json();
-      setName(data.id);
-      setCargo(data.cargo);
-      setRole(data.role);
-      setCurso(data.curso);
-      setDisciplinas(data.disciplinas);
-      setLoading(false);
-    } catch (err) {
-      setError(err.message);
-      setLoading(false);
-    }
-  }, [email]);
-
   useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const token = sessionStorage.getItem('token');
+        const response = await fetch(`https://api-pontodigital.vercel.app/user?email=${encodeURIComponent(email)}`, {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+  
+        if (!response.ok) {
+          throw new Error('Erro ao carregar dados do usuário.');
+        }
+  
+        const data = await response.json();
+        setName(data.username);
+        setCargo(data.cargo);
+        setRole(data.role);
+        setCurso(data.curso);
+        setDisciplinas(data.disciplinas);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+  
     setBackgroundColor(getRandomColor());
-    fetchUserData();
-
+    fetchUserData(); 
+  
     const intervalId = setInterval(() => {
       setTime(new Date());
     }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [fetchUserData]);
+  
+    return () => clearInterval(intervalId); 
+  }, [email]); 
+  
 
   const fetchDisciplinasEmAndamento = useCallback(async () => {
     try {
@@ -129,6 +131,7 @@ const Painel = () => {
 
   useEffect(() => {
     if (!loading) {
+      fetchUltimoLogAberto();
       fetchDisciplinasEmAndamento();
     }
   }, [loading, fetchDisciplinasEmAndamento]);
@@ -200,10 +203,9 @@ const Painel = () => {
       }
   
       const data = await response.json();
-      console.log('Log de início registrado com sucesso:', data);
-  
-      // Armazenar o `aula_id` para finalizar a aula posteriormente
       const { aula_id } = data;
+  
+      sessionStorage.setItem('aula_id', aula_id);
   
       const updatedDisciplinas = disciplinas.map(disciplina =>
         disciplina.nome === selectedDisciplina.nome ? { ...disciplina, emAndamento: true, aula_id } : disciplina
@@ -217,8 +219,11 @@ const Painel = () => {
     }
   };
   
+  
   const handleFinalizarAula = async () => {
-    if (!selectedDisciplina || !selectedDisciplina.emAndamento || !selectedDisciplina.aula_id) {
+    const aulaId = sessionStorage.getItem('aula_id');
+  
+    if (!selectedDisciplina || !selectedDisciplina.emAndamento || !aulaId) {
       alert('Nenhuma aula em andamento para finalizar.');
       return;
     }
@@ -237,7 +242,7 @@ const Painel = () => {
         },
         body: JSON.stringify({
           email: email,
-          aula_id: selectedDisciplina.aula_id,  // Usando `aula_id` para finalizar
+          aula_id: aulaId, 
           horario_fim: horarioFimAula,
           data: hoje,
           status: 'Concluído'
@@ -251,7 +256,8 @@ const Painel = () => {
       }
   
       const data = await response.json();
-      console.log('Log de fim de aula registrado com sucesso:', data);
+  
+      sessionStorage.removeItem('aula_id');
   
       const updatedDisciplinas = disciplinas.map(disciplina =>
         disciplina.nome === selectedDisciplina.nome ? { ...disciplina, emAndamento: false, aula_id: null } : disciplina
@@ -267,9 +273,11 @@ const Painel = () => {
   
   
 
+
   const isActive = (disciplinaNome) => {
     return selectedDisciplina && selectedDisciplina.nome === disciplinaNome ? 'active' : '';
   };
+
 
   const handleLogout = () => {
     sessionStorage.removeItem('token');
@@ -280,6 +288,46 @@ const Painel = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const fetchUltimoLogAberto = async () => {
+    try {
+      const aulaIdStored = sessionStorage.getItem('aula_id');
+      if (aulaIdStored) {
+        setAulaIdCorret(aulaIdStored);
+        return;
+      }
+  
+      const token = sessionStorage.getItem('token');
+      const response = await fetch(`https://api-pontodigital.vercel.app/logs?email=${encodeURIComponent(email)}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error('Erro ao carregar logs.');
+      }
+  
+      const logs = await response.json();
+  
+      const logEmAndamento = logs.reverse().find((log) => log.status === 'Em Andamento');
+  
+      if (logEmAndamento) {
+        const { aula_id, disciplina } = logEmAndamento;
+        sessionStorage.setItem('aula_id', aula_id); 
+        setAulaIdCorret(aula_id);
+  
+        const updatedDisciplinas = disciplinas.map((disciplinaItem) =>
+          disciplinaItem.nome === disciplina ? { ...disciplinaItem, emAndamento: true, aula_id } : disciplinaItem
+        );
+        setDisciplinas(updatedDisciplinas);
+  
+        setSelectedDisciplina({ ...selectedDisciplina, emAndamento: true, aula_id });
+      }
+    } catch (err) {
+      console.error('Erro ao buscar o último log em aberto:', err);
+    }
   };
 
   return (

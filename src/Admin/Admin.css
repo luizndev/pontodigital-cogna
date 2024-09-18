@@ -338,6 +338,10 @@ body{
     gap: 15px;
 }
 
+.listOptions p{
+    cursor: pointer;
+}
+
 .listOptions a{
     text-decoration: none;
     color: white;
