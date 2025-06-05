@@ -3,7 +3,7 @@
 Este projeto foi desenvolvido como uma solução solicitada pela Gestora Operacional Regional do Nordeste da empresa onde atuo (Anhanguera - Cogna).
 O objetivo principal é oferecer um controle preciso das horas/aula ministradas pelos professores, por disciplina, com validação de presença via geolocalização.
 
-<img src="https://i.imgur.com/SvyAzil.gif" width="100%" alt="Gif"  />
+<img src="https://i.imgur.com/aXzjULD.png" width="100%" alt="Gif"  />
 
 ## Funcionalidades
 - Registro de ponto por matéria
